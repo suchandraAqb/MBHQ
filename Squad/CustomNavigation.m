@@ -524,7 +524,7 @@ int ProgramIdForExercise;
                 return;
             }
             CommunityViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:identifier];
-            myController = controller;
+//            myController = controller;
         }else if ([identifier caseInsensitiveCompare:@"AfterTrial"] == NSOrderedSame){
             
             AfterTrialViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:identifier];

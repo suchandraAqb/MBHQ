@@ -40,6 +40,7 @@
 #import <IntentsUI/IntentsUI.h>
 #import <Intents/Intents.h>
 #import "NonSubscribedAlertViewController.h"
+#import "FBForumViewController.h"
 
 @interface FooterViewController () <INUIAddVoiceShortcutViewControllerDelegate>{
     IBOutlet UIView *mainView;
@@ -805,15 +806,6 @@
                 controller.webinar = [dict mutableCopy];
                 [self.parentViewController.navigationController pushViewController:controller animated:NO];
             }
-        }else{
-            if (![Utility isEmptyCheck:[defaults objectForKey:@"PlayingMeditation"]]) {
-                NSString *webinarstr=[defaults objectForKey:@"PlayingMeditation"];
-                NSData *data = [webinarstr dataUsingEncoding:NSUTF8StringEncoding];
-                NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                WebinarSelectedViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"WebinarSelectedView"];
-                controller.webinar = [dict mutableCopy];
-                [self.parentViewController.navigationController pushViewController:controller animated:NO];
-            }
         }
     }else{
 //        NSArray *controllers = self.parentViewController.navigationController.viewControllers;
@@ -1311,8 +1303,15 @@
     if ([visibleController isKindOfClass:[CommunityViewController class]]) {
         return;
     }
-    CommunityViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"CommunityView"];
-    [self.navigationController pushViewController:controller animated:YES];
+//    CommunityViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"CommunityView"];
+//    [self.navigationController pushViewController:controller animated:YES];
+    [self dismissViewControllerAnimated:NO completion:nil];
+    dispatch_async(dispatch_get_main_queue(),^ {
+        NSString *urlString=@"https://www.facebook.com/groups/250625228700325";
+        FBForumViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FBForum"];
+        controller.urlString = urlString;
+        [self.navigationController pushViewController:controller animated:YES];
+    });
 }
 
 -(BOOL)haveToPushViewController:(UIViewController *)myController parent:(UIViewController *)parent{
@@ -1369,7 +1368,14 @@
                 SectionTabViewController *controller = [[SectionTabViewController alloc]init];
                 [controller tabSwipeNavigation:self.parentViewController section:@"Appreciate" position:0 frmMenu:NO];
             }else{
-                [self goToCommunityView];
+//                [self goToCommunityView];
+                [self dismissViewControllerAnimated:NO completion:nil];
+                dispatch_async(dispatch_get_main_queue(),^ {
+                    NSString *urlString=@"https://www.facebook.com/groups/250625228700325";
+                    FBForumViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FBForum"];
+                    controller.urlString = urlString;
+                    [self.navigationController pushViewController:controller animated:YES];
+                });
             }
         }
     }else if (meditationButton.isSelected){
@@ -1407,7 +1413,14 @@
                 SectionTabViewController *controller = [[SectionTabViewController alloc]init];
                 [controller tabSwipeNavigation:self.parentViewController section:@"Learn" position:1 frmMenu:NO];
             }else{
-                [self goToCommunityView];
+//                [self goToCommunityView];
+                [self dismissViewControllerAnimated:NO completion:nil];
+                dispatch_async(dispatch_get_main_queue(),^ {
+                    NSString *urlString=@"https://www.facebook.com/groups/250625228700325";
+                    FBForumViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FBForum"];
+                    controller.urlString = urlString;
+                    [self.navigationController pushViewController:controller animated:YES];
+                });
             }
         } else if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
             if ([self.parentViewController isKindOfClass:[QuestionnaireHomeViewController class]]) {

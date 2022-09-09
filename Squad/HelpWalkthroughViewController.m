@@ -222,7 +222,7 @@
     [self dismissViewControllerAnimated:NO completion:nil];
     dispatch_async(dispatch_get_main_queue(),^ {
     CommunityViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"CommunityView"];
-    [self.parent.navigationController pushViewController:controller animated:YES];
+//    [self.parent.navigationController pushViewController:controller animated:YES];
     });
     
 }

@@ -585,7 +585,7 @@ static NSString *AchieveListHeaderViewIdentifier = @"AchieveListHeaderView";
 //    NSString *s=[NSString stringWithFormat:@"%@?token=%@",urlStr,[defaults valueForKey:@"UserSessionID"]];
     controller.isFromCourse=true;
     controller.liveForumUrlStr=urlStr;
-    [self.navigationController pushViewController:controller animated:YES];
+//    [self.navigationController pushViewController:controller animated:YES];
 }
 
 -(void)incompleStartTaskAlert{

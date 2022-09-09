@@ -124,7 +124,7 @@
     }
     if (!isCheck) {
         CommunityViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"CommunityView"];
-        [self.navigationController pushViewController:controller animated:NO];
+//        [self.navigationController pushViewController:controller animated:NO];
     }
 }
 - (IBAction)searchButtonPressed:(UIButton *)sender {

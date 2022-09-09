@@ -61,6 +61,7 @@
 #import "CommunityViewController.h"
 #import "AccountabilityBuddyHomeViewController.h"
 #import "MeditationRewardViewController.h"
+#import "FBForumViewController.h"
 @interface CustomNavigation : NSObject
 
 //@property (nonatomic, strong) NSDictionary *navigationDict;//mandatory
