@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Medium.ttf">
+            <string>Raleway-Medium</string>
+        </array>
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddGoalQuestion">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="How will I feel if I give up on this goal and fail, what am I willing to do to do ensure I don’t fail?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdU-VH-P5y">
+                    <rect key="frame" x="15" y="8" width="350" height="43"/>
+                    <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="17"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rng-az-bI9">
+                    <rect key="frame" x="15" y="61" width="350" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="1fE-tc-fPG"/>
+                    </constraints>
+                    <color key="textColor" red="0.89411764709999997" green="0.1529411765" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="SmC-Gx-4Hh"/>
+                    </connections>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Uf-h8-mYZ">
+                    <rect key="frame" x="0.0" y="111" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="F7V-Fk-MsE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Rng-az-bI9" secondAttribute="bottom" constant="1" id="3V8-JP-lQh"/>
+                <constraint firstAttribute="trailing" secondItem="GdU-VH-P5y" secondAttribute="trailing" constant="10" id="6YY-a0-th2"/>
+                <constraint firstItem="GdU-VH-P5y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Ahh-yN-ljZ"/>
+                <constraint firstAttribute="trailing" secondItem="8Uf-h8-mYZ" secondAttribute="trailing" id="E83-lb-O8b"/>
+                <constraint firstItem="8Uf-h8-mYZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HCo-PT-OsB"/>
+                <constraint firstAttribute="bottom" secondItem="8Uf-h8-mYZ" secondAttribute="bottom" id="QpJ-bw-mNu"/>
+                <constraint firstItem="Rng-az-bI9" firstAttribute="top" secondItem="GdU-VH-P5y" secondAttribute="bottom" constant="10" id="UQ9-vL-3Im"/>
+                <constraint firstItem="GdU-VH-P5y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Zwt-kX-D6Y"/>
+                <constraint firstAttribute="trailing" secondItem="Rng-az-bI9" secondAttribute="trailing" constant="10" id="hOY-Xo-Cxg"/>
+                <constraint firstItem="Rng-az-bI9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="w7D-8b-hFo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="answerTextView" destination="Rng-az-bI9" id="enW-fQ-P53"/>
+                <outlet property="answerTextViewHeight" destination="1fE-tc-fPG" id="LEb-A1-MRV"/>
+                <outlet property="titleLabel" destination="GdU-VH-P5y" id="4gi-rA-law"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="52"/>
+        </view>
+    </objects>
+</document>

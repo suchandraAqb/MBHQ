@@ -1,0 +1,40 @@
+//
+//  Squad-Prefix.pch
+//  Squad
+//
+//  Created by AQB Mac 4 on 29/05/17.
+//  Copyright © 2017 AQB Solutions. All rights reserved.
+//
+ #define NSLog if(1) NSLog
+#ifndef Squad_Prefix_pch
+#define Squad_Prefix_pch
+
+@import UIKit;
+@import StoreKit;
+@import Foundation;
+#import <WebKit/WebKit.h>
+#import <IntentsUI/IntentsUI.h>
+#import <Intents/Intents.h>
+#import "Utility.h"
+#import "DropdownViewController.h"
+#import "MasterMenuViewController.h"
+#import "AppDelegate.h"
+#import "TrailHomeViewController.h"
+#import <YLMoment/YLMoment.h> //add_su_new_forum
+#import "DAOReader.h" // AY 20022018 For DB
+#import "DBQuery.h" // AY 20022018 For DB
+
+#import "UIButton+Badge.h" // AY 25042018 For Badge
+#import "HeaderDetailsViewController.h"
+#import "TodayHomeViewController.h"
+#import "NSDate+DateTools.h"
+#import <UIImageView+AFNetworking.h>
+#import <AFURLSessionManager.h>
+#import "UIButton+WebCache.h"
+#import "PrivacyPolicyAndTermsServiceViewController.h"
+#import "PopularHabitListViewController.h"
+#import "PopularHabitLDetailsViewController.h"
+#import "HabitHackerFirstViewController.h"
+#import "SignupWithEmailViewController.h"
+#import <LocalAuthentication/LocalAuthentication.h>
+#endif /* Squad_Prefix_pch */
