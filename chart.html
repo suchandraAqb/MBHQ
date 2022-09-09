@@ -1,0 +1,90 @@
+<script src="http://192.168.2.140:52959/Scripts/jquery-2.1.4.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://192.168.2.140:52959/Content/result.css" />
+
+<div class="col-lg-12 chart">
+    <div class="chart-wrapper col-lg-10 col-lg-offset-1" style="padding:0;">
+        <div id="containerChart" style="min-width: 310px; margin: 0 auto"></div>
+    </div>
+</div>
+
+
+<script src="http://192.168.2.140:52959/Scripts/highcharts.js"></script>
+<script>
+    
+    $(document).ready(function () {
+                      
+                      
+                      LoadbodyCompositionChart();
+                      
+                      });
+                      
+                      
+                      $('#containerChart').highcharts({
+                                                      chart: {
+                                                      type: 'spline'
+                                                      },
+                                                      title: {
+                                                      text: 'Progress'//,
+                                                      //x: -20 //center
+                                                      },
+                                                      xAxis: {
+                                                      categories: data.CourseWeekStartDate
+                                                      },
+                                                      yAxis: {
+                                                      title: {
+                                                      text: 'Measurements'
+                                                      }
+                                                      },
+                                                      tooltip: {
+                                                      //valueSuffix: '°C'
+                                                      },
+                                                      legend: {
+                                                      layout: 'vertical',
+                                                      align: 'right',
+                                                      verticalAlign: 'middle',
+                                                      borderWidth: 0
+                                                      },
+                                                      series: [{
+                                                               name: 'Weight',
+                                                               data: data.Weight,
+                                                               color: '#6BFFF0'
+                                                               }, {
+                                                               name: 'Body Fat',
+                                                               data: data.BodyFat,
+                                                               color: '#e75280'
+                                                               }, {
+                                                               name: 'BodyFatPercentage',
+                                                               data: data.BodyFatPercentage,
+                                                               color: '#f45b5b'
+                                                               }, {
+                                                               name: 'Chest',
+                                                               data: data.Chest,
+                                                               color: '#f0ff00'
+                                                               }, {
+                                                               name: 'Stomach',
+                                                               data: data.Stomach,
+                                                               color: '#8085e9'
+                                                               }, {
+                                                               name: 'Hip',
+                                                               data: data.Hip,
+                                                               color: '#ff8041'
+                                                               }, {
+                                                               name: 'Leg',
+                                                               data: data.Leg,
+                                                               color: '#22ee80'
+                                                               }, {
+                                                               name: 'Arm',
+                                                               data: data.Arm,
+                                                               color: '#2252ff'
+                                                               }, {
+                                                               name: 'Total',
+                                                               data: data.Total,
+                                                               visible: false,
+                                                               color: '#8d4654'
+                                                               }],
+                                                      
+                                                      plotOptions: { series: { connectNulls: true } }
+                                                      });
+    </script>
+
