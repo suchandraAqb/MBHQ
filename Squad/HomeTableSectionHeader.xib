@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="oswald.regular.ttf">
+            <string>Oswald-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeTableSectionHeader">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wk4-zC-m08">
+                    <rect key="frame" x="10" y="0.0" width="355" height="50"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E2i-9t-k5V">
+                            <rect key="frame" x="18" y="10" width="31" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="31" id="0qf-Wq-9tO"/>
+                                <constraint firstAttribute="height" constant="31" id="hr9-sq-bDj"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsl-ay-88K">
+                            <rect key="frame" x="59" y="8" width="262.5" height="34"/>
+                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="26"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_white_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="ccs-pl-pBJ">
+                            <rect key="frame" x="331.5" y="15" width="8.5" height="19.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="19.5" id="Y2J-d8-fwJ"/>
+                                <constraint firstAttribute="width" constant="8.5" id="kTH-Zn-fq0"/>
+                            </constraints>
+                        </imageView>
+                        <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GyY-tD-EZb">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNT-6D-sRi">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.1450980392" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="ccs-pl-pBJ" firstAttribute="leading" secondItem="Wsl-ay-88K" secondAttribute="trailing" constant="10" id="6hW-TS-0tn"/>
+                        <constraint firstAttribute="trailing" secondItem="GyY-tD-EZb" secondAttribute="trailing" id="D8f-Kv-hBt"/>
+                        <constraint firstAttribute="bottom" secondItem="DNT-6D-sRi" secondAttribute="bottom" id="Eg6-3R-KyQ"/>
+                        <constraint firstItem="E2i-9t-k5V" firstAttribute="leading" secondItem="Wk4-zC-m08" secondAttribute="leading" constant="18" id="I4Y-RC-Vn6"/>
+                        <constraint firstItem="DNT-6D-sRi" firstAttribute="leading" secondItem="Wk4-zC-m08" secondAttribute="leading" id="LVd-2V-KpM"/>
+                        <constraint firstItem="E2i-9t-k5V" firstAttribute="centerY" secondItem="Wk4-zC-m08" secondAttribute="centerY" id="LhN-5g-5V7"/>
+                        <constraint firstItem="GyY-tD-EZb" firstAttribute="top" secondItem="Wk4-zC-m08" secondAttribute="top" id="Mas-6E-tSZ"/>
+                        <constraint firstItem="Wsl-ay-88K" firstAttribute="leading" secondItem="E2i-9t-k5V" secondAttribute="trailing" constant="10" id="QYn-2v-gMg"/>
+                        <constraint firstItem="GyY-tD-EZb" firstAttribute="leading" secondItem="Wk4-zC-m08" secondAttribute="leading" id="c4a-nR-lcV"/>
+                        <constraint firstItem="DNT-6D-sRi" firstAttribute="top" secondItem="Wk4-zC-m08" secondAttribute="top" id="cQC-rt-C7C"/>
+                        <constraint firstAttribute="bottom" secondItem="GyY-tD-EZb" secondAttribute="bottom" id="d09-zw-On5"/>
+                        <constraint firstItem="Wsl-ay-88K" firstAttribute="centerY" secondItem="Wk4-zC-m08" secondAttribute="centerY" id="d3h-ug-99L"/>
+                        <constraint firstAttribute="trailing" secondItem="DNT-6D-sRi" secondAttribute="trailing" id="g2Y-wr-Ohj"/>
+                        <constraint firstAttribute="trailing" secondItem="ccs-pl-pBJ" secondAttribute="trailing" constant="15" id="jVB-fO-iYv"/>
+                        <constraint firstItem="Wsl-ay-88K" firstAttribute="top" secondItem="Wk4-zC-m08" secondAttribute="top" constant="8" id="k6Q-YT-033"/>
+                        <constraint firstItem="ccs-pl-pBJ" firstAttribute="centerY" secondItem="Wk4-zC-m08" secondAttribute="centerY" id="sqT-qz-3xn"/>
+                        <constraint firstAttribute="bottom" secondItem="Wsl-ay-88K" secondAttribute="bottom" constant="8" id="xkn-CZ-mFi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Wk4-zC-m08" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="25A-sq-zen"/>
+                <constraint firstItem="Wk4-zC-m08" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="87a-MO-VMx"/>
+                <constraint firstItem="Wk4-zC-m08" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="94i-jj-YDe"/>
+                <constraint firstItem="Wk4-zC-m08" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-10" id="hc0-cz-Ulf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="overlayView" destination="GyY-tD-EZb" id="Eqb-kV-TYo"/>
+                <outlet property="titleButton" destination="DNT-6D-sRi" id="AME-2K-V2T"/>
+                <outlet property="titleImage" destination="E2i-9t-k5V" id="3uf-SO-e3c"/>
+                <outlet property="titlelabel" destination="Wsl-ay-88K" id="HF9-VG-Z8K"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="52"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="home_white_arrow.png" width="8" height="19"/>
+    </resources>
+</document>

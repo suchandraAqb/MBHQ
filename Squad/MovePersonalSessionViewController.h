@@ -1,0 +1,13 @@
+//
+//  MovePersonalSessionViewController.h
+//  Squad
+//
+//  Created by AQB SOLUTIONS on 13/02/2017.
+//  Copyright © 2017 AQB Solutions. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "DropdownViewController.h" //ahd
+
+@interface MovePersonalSessionViewController : UIViewController<DropdownViewDelegate>
+@end

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Medium.ttf">
+            <string>Raleway-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AchieveListFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add.png" translatesAutoresizingMaskIntoConstraints="NO" id="snK-5y-IcS">
+                    <rect key="frame" x="20" y="7" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="DVn-ke-Iiz"/>
+                        <constraint firstAttribute="width" constant="36" id="ZMd-ad-2Jm"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6W-BX-W7C">
+                    <rect key="frame" x="76" y="15" width="200" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="mco-Iz-7CQ"/>
+                        <constraint firstAttribute="width" constant="200" id="xq8-Af-E6r"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="15"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIJ-Wo-6tR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="snK-5y-IcS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6Fy-CL-MU4"/>
+                <constraint firstItem="JIJ-Wo-6tR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="N6Q-Ll-zYY"/>
+                <constraint firstAttribute="trailing" secondItem="JIJ-Wo-6tR" secondAttribute="trailing" id="T3T-Ei-K33"/>
+                <constraint firstAttribute="bottom" secondItem="JIJ-Wo-6tR" secondAttribute="bottom" id="bs0-cQ-n0F"/>
+                <constraint firstItem="snK-5y-IcS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="o0E-4Q-HN1"/>
+                <constraint firstItem="JIJ-Wo-6tR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="q0H-B9-qKL"/>
+                <constraint firstItem="k6W-BX-W7C" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uaE-by-Sh4"/>
+                <constraint firstItem="k6W-BX-W7C" firstAttribute="leading" secondItem="snK-5y-IcS" secondAttribute="trailing" constant="20" id="wSi-fD-dfD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addButton" destination="JIJ-Wo-6tR" id="lrc-di-Jp9"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="add.png" width="36" height="36"/>
+    </resources>
+</document>

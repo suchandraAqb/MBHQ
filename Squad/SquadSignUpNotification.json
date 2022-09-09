@@ -1,0 +1,81 @@
+[
+  {
+    "title": "CONNECT WITH YOUR SQUAD",
+    "body": "Hey [name], welcome to the most amazing health and fitness community of positive, proactive women on the planet! We are so excited to have you on board!  If you haven’t already, please join our Worldwide Forum",
+    "fromController": "WorldForum",
+    "day":1
+  },
+
+  {
+    "title": "8 WEEK CHALLENGE",
+    "body": "Did you start your 8 week challenge yet? This program gets SERIOUS RESULTS. Start today!",
+    "fromController": "8WeekChallenge",
+    "day":2
+  },
+{
+    "title": "TRAINING TIPs 101",
+    "body": "Link your Fitbit, Iwatch or garmin watch to track daily steps, cals. Stay accountable, set goals and compare results with other Squad members.",
+    "fromController": "activityTracker",
+    "day":3
+  },
+{
+    "title": "CUSTOM SHOP",
+    "body": "Only want to make ‘set meals’ from your custom plan? No worries, just create a custom shopping list that only has the meals you need in it.",
+    "fromController": "customShopping",
+    "day":4
+  },
+ {
+    "title": "BECOME A FAT LOSS EXPERT",
+    "body": "Start a short course today!  Quick, fun and a game changer to achieve your goals",
+    "fromController": "CoursesList",
+    "day":5
+  },
+{
+    "title": "FEELING STRESSED",
+    "body": "Why not do a guided mediation?  Just another cool feature in your Squad App  Namaste",
+    "fromController": "WebinarListView",
+    "day":8
+  },
+{
+    "title": "TRACK YOUR PROGRESS",
+    "body": "Everybody FORGETS to do this step… Take your before and after pics. In 8 weeks you will be BLOWN away with the results. Upload your pics here",
+    "fromController": "TrackPicture",
+    "day":12
+  },
+{
+    "title": "TRACK YOUR WALKS",
+    "body": "Our FBW tracker allows you to track your walks without a fitbit and even gives you amazing podcasts to listen to at the same time",
+    "fromController": "FBWTracker",
+    "day":15
+  },
+{
+    "title": "GET THE LOW DOWN",
+    "body": "Did you know we have a calendar of all upcoming events, challenges, seminars and LIVE CHATS in the forum",
+    "fromController": "calendar",
+    "day":19
+  },
+{
+    "title": "OFFLINE WORKOUTS",
+    "body": "Do you need to save internet or does your gym have poor reception. Download your session at home, then click OFFLINE MODE so you always get to TRAIN",
+    "fromController": "MenuSetting",
+    "day":22
+  },
+{
+    "title": "CALORIE COUNTER",
+    "body": "Forget my fitness pal. Our calorie counter works with your meal plan to keep you on track, allows you to visually track your progress and hydration all at the same time!",
+    "fromController": "MealMatch",
+    "day":26
+  },
+{
+    "title": "ADVANCED CUSTOMISATION 1",
+    "body": "Your nutrition plan truly is CUSTOMISED. Adjust your daily calorie and macro levels to be ANYTHING YOU WANT. Go to Nutrition settings, step 5 and scroll to the bottom. You can choose your daily intake and have your entire plan update around your choice!",
+    "fromController": "NutritionSetting",
+    "day":29
+  },
+{
+    "title": "ADVANCED CUSTOMISATION 2",
+    "body": "Override your custom exercise program. Move sessions to repeat on different days and change yoga to be weights. You have FULL control over anything you don’t LOVE",
+    "fromController": "ExerciseSetting",
+    "day":33
+  }
+]
