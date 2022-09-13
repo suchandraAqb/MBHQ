@@ -576,11 +576,11 @@
     if ([defaults boolForKey:@"IsNonSubscribedUser"]) {
         [defaults setBool:false forKey:@"IsPopUpShowForFreeMode"];
     }
-    if (![Utility isEmptyCheck:[defaults objectForKey:@"RunningVideoSection"]]) {
+//    if (![Utility isEmptyCheck:[defaults objectForKey:@"RunningVideoSection"]]) {
         if (_playerController) {
             [_playerController.player play];
         }
-    }
+//    }
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
