@@ -77,7 +77,7 @@
 @end
 
 @implementation CourseArticleDetailsViewController
-@synthesize taskId,courseArticleDelegate,imageUrl;
+@synthesize taskId,courseArticleDelegate,imageUrl;//,playPauseBtn;
 
 #pragma mark View Lifecycle
 
@@ -175,8 +175,15 @@
     }else{
          [self getData];
     }
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationWillEnterForeground:)
+                                                 name:UIApplicationWillEnterForegroundNotification object:nil];
    
+}
+-(void)applicationWillEnterForeground:(NSNotification *)notification{
+    playPauseBtn.selected = NO;
+    CMTime startTime = self->appDelegate.playerController.player.currentTime;
+    self->videoStartTime = CMTimeGetSeconds(startTime);
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
@@ -247,6 +254,7 @@
     if (_audioPlayer) {
         _audioPlayer = nil;
     }
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -879,84 +887,84 @@
 }
 
 #pragma mark - Private Methods
--(void)PlayPauseButtonPressed{
-    
-        playPauseBtn.selected = !playPauseBtn.selected;
-    //
-    //    if(playPauseBtn.selected)
-    //    {
-    //        [appDelegate.playerController.player play];
-    //    }
-    //    else
-    //    {
-    //        [appDelegate.playerController.player pause];
-    //    }
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if(self->playPauseBtn.selected)
-            {
-                if (self->videoStartTime) {
-                  
-                    CMTime playerDuration = self->appDelegate.playerController.player.currentItem.asset.duration;
-                    double maxDuration = CMTimeGetSeconds(playerDuration);
-                    
-    //                double currentTime = [[NSString stringWithFormat:@"%@",[self->dataDict objectForKey:@"Time"]]doubleValue];
-                    double currentTime = self->videoStartTime;
-                     double audioPlaytime = self->videoStartTime;
-                    
-                    if (currentTime > maxDuration) {
-                        CMTime startTime = CMTimeMake(0, self->appDelegate.playerController.player.currentTime.timescale);
-                        [self->appDelegate.playerController.player seekToTime:startTime toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
-                            [self->appDelegate.playerController.player play];
-                        }];
-                        audioPlaytime = 0;
-                    }else{
-                        CMTime startTime = CMTimeMake(currentTime, 1);
-    //                    int s=self->appDelegate.playerController.player.currentTime.timescale;
-                        //self->appDelegate.playerController.player.currentTime.timescale
-                        [self->appDelegate.playerController.player seekToTime:startTime toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
-                            [self->appDelegate.playerController.player play];
-                        }];
-                    }
-                    
-                    if(self->_audioPlayer){
-                        
-                       [self->_audioPlayer setCurrentTime:audioPlaytime];
-                    }
-                    
-                }else{
-                    [self->appDelegate.playerController.player play];
-                }
-                 if(self->_audioPlayer){
-                    self->_audioPlayer.delegate = self;
-                    [self->_audioPlayer prepareToPlay];
-                    [self->_audioPlayer setVolume:0];
-                    [self->_audioPlayer play];
-                    [self startAudioVisualizer];
-                 }
-                
-                if (self->contentView) {
-                    [self->contentView removeFromSuperview];
-                }
-                self->contentView = [Utility activityIndicatorView:self];
-                
-            }
-            else
-            {
-                [self->appDelegate.playerController.player pause];
-                if(self->_audioPlayer){
-                    [self->_audioPlayer pause];
-                    [self stopAudioVisualizer];
-                }
-                CMTime startTime = self->appDelegate.playerController.player.currentTime;
-                self->videoStartTime = CMTimeGetSeconds(startTime);
-                if (self->contentView) {
-                    [self->contentView removeFromSuperview];
-                }
-            }
-        });
-    
-}
+//-(void)PlayPauseButtonPressed{
+//
+//        playPauseBtn.selected = !playPauseBtn.selected;
+//    //
+//    //    if(playPauseBtn.selected)
+//    //    {
+//    //        [appDelegate.playerController.player play];
+//    //    }
+//    //    else
+//    //    {
+//    //        [appDelegate.playerController.player pause];
+//    //    }
+//
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            if(self->playPauseBtn.selected)
+//            {
+//                if (self->videoStartTime) {
+//
+//                    CMTime playerDuration = self->appDelegate.playerController.player.currentItem.asset.duration;
+//                    double maxDuration = CMTimeGetSeconds(playerDuration);
+//
+//    //                double currentTime = [[NSString stringWithFormat:@"%@",[self->dataDict objectForKey:@"Time"]]doubleValue];
+//                    double currentTime = self->videoStartTime;
+//                     double audioPlaytime = self->videoStartTime;
+//
+//                    if (currentTime > maxDuration) {
+//                        CMTime startTime = CMTimeMake(0, self->appDelegate.playerController.player.currentTime.timescale);
+//                        [self->appDelegate.playerController.player seekToTime:startTime toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
+//                            [self->appDelegate.playerController.player play];
+//                        }];
+//                        audioPlaytime = 0;
+//                    }else{
+//                        CMTime startTime = CMTimeMake(currentTime, 1);
+//    //                    int s=self->appDelegate.playerController.player.currentTime.timescale;
+//                        //self->appDelegate.playerController.player.currentTime.timescale
+//                        [self->appDelegate.playerController.player seekToTime:startTime toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
+//                            [self->appDelegate.playerController.player play];
+//                        }];
+//                    }
+//
+//                    if(self->_audioPlayer){
+//
+//                       [self->_audioPlayer setCurrentTime:audioPlaytime];
+//                    }
+//
+//                }else{
+//                    [self->appDelegate.playerController.player play];
+//                }
+//                 if(self->_audioPlayer){
+//                    self->_audioPlayer.delegate = self;
+//                    [self->_audioPlayer prepareToPlay];
+//                    [self->_audioPlayer setVolume:0];
+//                    [self->_audioPlayer play];
+//                    [self startAudioVisualizer];
+//                 }
+//
+//                if (self->contentView) {
+//                    [self->contentView removeFromSuperview];
+//                }
+//                self->contentView = [Utility activityIndicatorView:self];
+//
+//            }
+//            else
+//            {
+//                [self->appDelegate.playerController.player pause];
+//                if(self->_audioPlayer){
+//                    [self->_audioPlayer pause];
+//                    [self stopAudioVisualizer];
+//                }
+//                CMTime startTime = self->appDelegate.playerController.player.currentTime;
+//                self->videoStartTime = CMTimeGetSeconds(startTime);
+//                if (self->contentView) {
+//                    [self->contentView removeFromSuperview];
+//                }
+//            }
+//        });
+//
+//}
 -(void)setTickItOffButton:(UIButton *)btn isRead:(bool)isRead{
     if (isRead) {
         [btn setTitle:@"DONE" forState:UIControlStateNormal];

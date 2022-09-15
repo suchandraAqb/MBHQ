@@ -26,5 +26,6 @@
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 @property (strong, nonatomic) AudioVisualizer *audioVisualizer;
 @property (nonatomic, strong) NSString *imageUrl;
-
+//- (IBAction)playPauseBtnPressed:(UIButton *)sender;
+//@property (nonatomic , weak) IBOutlet UIButton *playPauseBtn;
 @end

@@ -510,9 +510,9 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    if (_playerController) {
-        [_playerController.player play];
-    }
+//    if (_playerController) {
+//        [_playerController.player play];
+//    }
     if (![Utility isEmptyCheck:[defaults objectForKey:@"RunningVideoSection"]]) {
         if ([[defaults objectForKey:@"RunningVideoSection"] isEqualToString:@"Course"]) {
             if (![Utility isEmptyCheck:[defaults objectForKey:@"PlayingCourse"]]) {
@@ -555,6 +555,9 @@
 //    if (self.playerController) {
 //        self.playerController.player = nil;
 //    }
+    if (_playerController) {
+        [_playerController.player play];
+    }
     [self setUpRemoteControl];
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"Discoverable"] && ![[[NSUserDefaults standardUserDefaults] objectForKey:@"Discoverable"] isEqual:[NSNull null]] && [[[NSUserDefaults standardUserDefaults] objectForKey:@"Discoverable"] caseInsensitiveCompare:@"yes"] == NSOrderedSame) {
     }
@@ -576,9 +579,11 @@
     if ([defaults boolForKey:@"IsNonSubscribedUser"]) {
         [defaults setBool:false forKey:@"IsPopUpShowForFreeMode"];
     }
-        if (_playerController) {
-            [_playerController.player play];
-        }
+//        if (_playerController) {
+//
+//
+////            [_playerController.player play];
+//        }
 
 }
 
