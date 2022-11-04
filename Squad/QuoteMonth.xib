@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Zra-BQ-i26" customClass="QuoteMonth">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yvt-Q5-70N">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <color key="backgroundColor" red="0.44705882349999998" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvS-iq-e8t">
+                    <rect key="frame" x="10" y="0.0" width="365" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="jh2-T6-cL8" firstAttribute="bottom" secondItem="QvS-iq-e8t" secondAttribute="bottom" id="5e0-3i-8UO"/>
+                <constraint firstAttribute="bottom" secondItem="yvt-Q5-70N" secondAttribute="bottom" id="BG0-DN-xZM"/>
+                <constraint firstItem="QvS-iq-e8t" firstAttribute="leading" secondItem="jh2-T6-cL8" secondAttribute="leading" constant="10" id="KgI-cK-UAg"/>
+                <constraint firstItem="jh2-T6-cL8" firstAttribute="trailing" secondItem="QvS-iq-e8t" secondAttribute="trailing" id="kzW-6O-1E9"/>
+                <constraint firstItem="yvt-Q5-70N" firstAttribute="leading" secondItem="jh2-T6-cL8" secondAttribute="leading" id="neJ-Sb-QRh"/>
+                <constraint firstItem="QvS-iq-e8t" firstAttribute="top" secondItem="jh2-T6-cL8" secondAttribute="top" id="uk7-Bl-XXD"/>
+                <constraint firstItem="jh2-T6-cL8" firstAttribute="trailing" secondItem="yvt-Q5-70N" secondAttribute="trailing" id="z0t-Y7-Ibn"/>
+                <constraint firstItem="yvt-Q5-70N" firstAttribute="top" secondItem="Zra-BQ-i26" secondAttribute="top" id="zHx-B1-suA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="jh2-T6-cL8"/>
+            <connections>
+                <outlet property="monthLabel" destination="QvS-iq-e8t" id="kEc-LS-Ock"/>
+            </connections>
+        </view>
+    </objects>
+</document>
