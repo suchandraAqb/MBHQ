@@ -1890,7 +1890,7 @@
                 
 //                [cell.tickuntickButton setImage:[UIImage imageNamed:@"untick_mbhq.png"] forState:UIControlStateNormal];
                 
-                if(saveView.isHidden){
+//                if(saveView.isHidden){
                     if (newActionCurrentDayTaskIsDone) {
                         [cell.tickuntickButton setImage:[UIImage imageNamed:@"tick_mbhq.png"] forState:UIControlStateNormal];
                     }else if (swapActionCurrentDayTaskIsDone){
@@ -1898,7 +1898,7 @@
                     }else{
                         [cell.tickuntickButton setImage:[UIImage imageNamed:@"untick_mbhq.png"] forState:UIControlStateNormal];
                     }
-                }else{
+//                }else{
                     /*if (![Utility isEmptyCheck:alltickUntickButtonSenderTags]) {
                         if(){
                     [cell.tickuntickButton setImage:[UIImage imageNamed:@"tick_mbhq.png"] forState:UIControlStateNormal];
@@ -1910,7 +1910,7 @@
                     }else{
                         NSLog(@"");
                     }*/
-                }
+//                }
              
                 
                 

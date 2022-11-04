@@ -348,10 +348,10 @@
         return;
     }
      HabitHackerDetailNewViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"HabitHackerDetailNewView"];
-     controller.habitId = [habitDict valueForKey:@"HabitId"];
+     controller.habitId = [_habitDict valueForKey:@"HabitId"];
      controller.habitDetailDelegate=self;
      controller.isEditMode = true;
-     controller.habitDictFromStat= habitDict;
+     controller.habitDictFromStat= habitDetailsDictionary;
      controller.isFromHabitList = true;
      controller.isFromNotification = true;
 //     controller.reminderSwitchStatus;

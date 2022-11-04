@@ -61,10 +61,10 @@
 	<string>$(PRODUCT_NAME) will use Photo Library to add images.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME) will use Photo Library to take photo in Gratitude, Growth ,Bucket , Vision section.</string>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>$(PRODUCT_NAME) will use Speech recognition to determine which words you speak into this device&apos;s microphone.</string>
 	<key>NSRemindersUsageDescription</key>
 	<string>$(PRODUCT_NAME) will use your reminder to remind you about the events</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>$(PRODUCT_NAME) will use Speech recognition to determine which words you speak into this device's microphone.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>com.mindbodyhq.admin.mbHQ.mbHQ</string>
